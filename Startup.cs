@@ -12,6 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+// using MySql.Data;
+// using MySqL.Data.EntityFrameworkCore;
+// using MySqL.Data.EntityFrameworkCore.Extensions;
 
 namespace Loguei
 {
@@ -27,6 +32,10 @@ namespace Loguei
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // var connection = Configuration["LogueiConnection:MySqlConnectionString"];
+            var connection = Configuration.GetConnectionString("LogueiConnection");
+            
+            services.AddDbContext<UserContext>(opt => opt.UseMySql(connection,ServerVersion.AutoDetect(connection)));
             services.AddScoped<IUserRepo,UserRepo>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
