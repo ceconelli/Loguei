@@ -37,6 +37,7 @@ namespace Loguei
             
             services.AddDbContext<UserContext>(opt => opt.UseMySql(connection,ServerVersion.AutoDetect(connection)));
             services.AddScoped<IUserRepo,UserRepo>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

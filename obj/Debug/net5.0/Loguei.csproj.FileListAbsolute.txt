@@ -36,3 +36,5 @@
 /home/gustavoceconelli/projects/Loguei/bin/Debug/net5.0/MySqlConnector.dll
 /home/gustavoceconelli/projects/Loguei/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/gustavoceconelli/projects/Loguei/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+/home/gustavoceconelli/projects/Loguei/bin/Debug/net5.0/AutoMapper.dll
+/home/gustavoceconelli/projects/Loguei/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

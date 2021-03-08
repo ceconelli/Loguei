@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SRQrUFjOjkx30OgV4A9MUUMMADrmlzQHM4GFum59K7pQnpZoN3qQ7UTOkd+Q0fTQou1ogamcTmgSN6l4kA+GtQ==",
+  "dgSpecHash": "UzvuIDlvohWA9iqFLIMvZr3GJpy8YdBUrwcmArRKNcQhtfgdwk2Ht38mqZWd+BX1inaJNK7gcOCRYe16PPy7CQ==",
   "success": true,
   "projectFilePath": "/home/gustavoceconelli/projects/Loguei/Loguei.csproj",
   "expectedPackageFiles": [
+    "/home/gustavoceconelli/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/home/gustavoceconelli/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "/home/gustavoceconelli/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/gustavoceconelli/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/gustavoceconelli/.nuget/packages/microsoft.entityframeworkcore/5.0.3/microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
@@ -30,7 +32,8 @@
     "/home/gustavoceconelli/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "/home/gustavoceconelli/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/home/gustavoceconelli/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "/home/gustavoceconelli/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "/home/gustavoceconelli/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "/home/gustavoceconelli/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
