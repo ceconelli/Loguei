@@ -7,9 +7,10 @@ namespace Loguei.Data
 {
     public interface IUserRepo
     {
+        bool SaveChanges();
         IEnumerable<User> GetUsers();
         User GetUserByEmail(int id);
-        Task<ActionResult<bool>> AddUser(User p_user);
+        void AddUser(User p_user);
         bool DeleteUser(string p_email);
     }
 }

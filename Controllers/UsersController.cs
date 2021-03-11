@@ -14,7 +14,7 @@ namespace Loguei.Controllers
     {
         private readonly IUserRepo _userRepo;
 
-        public IMapper _mapper { get; }
+        private readonly IMapper _mapper;
 
         public UsersController(IUserRepo userRepo, IMapper mapper)
         {
@@ -36,10 +36,13 @@ namespace Loguei.Controllers
             return (user != null ? Ok(_mapper.Map<UserReadDto>(user)) : NotFound()); 
         }
         [HttpPost]
-        public ActionResult<User> PostUser(User newUser)
+        public ActionResult<UserReadDto> CreateUser([FromBody]UserCreateDto newUser)
         {
-            _userRepo.AddUser(newUser);
-            return Ok(newUser);
+            // string body = Request.Body.ReadAsync(;
+            var userModel = _mapper.Map<User>(newUser);
+            _userRepo.AddUser(userModel);
+            _userRepo.SaveChanges();
+            return Ok(userModel);
         }
 
     }

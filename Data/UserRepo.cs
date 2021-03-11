@@ -14,11 +14,18 @@ namespace Loguei.Data
         {
             _context = userContext;
         }
-        public async Task<ActionResult<bool>> AddUser(User p_user)
+
+        public bool SaveChanges()
         {
+            return (_context.SaveChanges() >= 0);
+        }
+        public void AddUser(User p_user)
+        {
+            if (p_user == null)
+            {
+                throw new System.ArgumentNullException(nameof(p_user));
+            }
             _context.Users.Add(p_user);
-            await _context.SaveChangesAsync();
-            return true;
         }
 
         public bool DeleteUser(string p_email)
