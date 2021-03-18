@@ -29,7 +29,7 @@ namespace Loguei.Controllers
             return Ok(_mapper.Map<IEnumerable<UserReadDto>>(allUsers));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name="GetUserByEmail")]
         public ActionResult <IEnumerable<UserReadDto>> GetUserByEmail(int id)
         {
             var user = _userRepo.GetUserByEmail(id);
@@ -42,7 +42,8 @@ namespace Loguei.Controllers
             var userModel = _mapper.Map<User>(newUser);
             _userRepo.AddUser(userModel);
             _userRepo.SaveChanges();
-            return Ok(userModel);
+            return CreatedAtRoute(nameof(GetUserByEmail),new {id = userModel.Id},_mapper.Map<UserReadDto>(userModel));
+            // return Ok(_mapper.Map<UserReadDto>(userModel));
         }
 
     }
