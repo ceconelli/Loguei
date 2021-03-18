@@ -11,7 +11,7 @@ namespace Loguei.Data
         IEnumerable<User> GetUsers();
         User GetUserByEmail(int id);
         void AddUser(User p_user);
-        bool DeleteUser(string p_email);
         void UpdateUser(User p_user);
+        void DeleteUser(User userToBeRemoved);
     }
 }

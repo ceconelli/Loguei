@@ -59,6 +59,18 @@ namespace Loguei.Controllers
             _userRepo.SaveChanges();
             return NoContent();
         }
+        [HttpDelete("{id}")]
+        public ActionResult DeleteUser(int id)
+        {
+            var userToBeRemoved = _userRepo.GetUserByEmail(id);
+            if (userToBeRemoved == null)
+            {
+                return NotFound();
+            }
+            _userRepo.DeleteUser(userToBeRemoved);
+            _userRepo.SaveChanges();
+            return NoContent();
+        }
 
     }
 }

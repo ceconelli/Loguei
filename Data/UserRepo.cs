@@ -28,11 +28,6 @@ namespace Loguei.Data
             _context.Users.Add(p_user);
         }
 
-        public bool DeleteUser(string p_email)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public User GetUserByEmail(int id)
         {
             return _context.Users.FirstOrDefault(p => id.Equals(p.Id));
@@ -46,6 +41,11 @@ namespace Loguei.Data
         public void UpdateUser(User p_user)
         {
             
+        }
+
+        public void DeleteUser(User userToBeRemoved)
+        {
+            _context.Users.Remove(userToBeRemoved);
         }
     }
 }
