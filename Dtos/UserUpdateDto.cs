@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Loguei.Dtos
 {
-    public class UserCreateDto
+    public class UserUpdateDto
     {
         [Required]
         public string Name { get; set; }

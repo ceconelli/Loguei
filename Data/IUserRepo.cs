@@ -12,5 +12,6 @@ namespace Loguei.Data
         User GetUserByEmail(int id);
         void AddUser(User p_user);
         bool DeleteUser(string p_email);
+        void UpdateUser(User p_user);
     }
 }

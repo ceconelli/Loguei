@@ -46,5 +46,19 @@ namespace Loguei.Controllers
             // return Ok(_mapper.Map<UserReadDto>(userModel));
         }
 
+        [HttpPut("{id}")]
+        public ActionResult UpdateUser(int id, UserUpdateDto userUpdateDto)
+        {  
+            var userFromDB = _userRepo.GetUserByEmail(id);
+            if (userFromDB == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(userUpdateDto,userFromDB);
+            _userRepo.UpdateUser(userFromDB);
+            _userRepo.SaveChanges();
+            return NoContent();
+        }
+
     }
 }

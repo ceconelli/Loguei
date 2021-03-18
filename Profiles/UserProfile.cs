@@ -10,6 +10,7 @@ namespace Logue.Profiles
         {
             CreateMap<User, UserReadDto>();
             CreateMap<UserCreateDto,User>();
+            CreateMap<UserUpdateDto,User>();
         }
     }
 }

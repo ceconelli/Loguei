@@ -42,5 +42,10 @@ namespace Loguei.Data
         {
             return _context.Users.ToList();
         }
+
+        public void UpdateUser(User p_user)
+        {
+            
+        }
     }
 }
